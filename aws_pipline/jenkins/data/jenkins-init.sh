@@ -52,6 +52,5 @@ cd /usr/local/bin
 wget -q https://releases.hashicorp.com/packer/0.10.2/packer_0.10.2_linux_amd64.zip
 unzip packer_0.10.2_linux_amd64.zip
 # clean up
-apt-get clean
 rm terraform_0.7.7_linux_amd64.zip
 rm packer_0.10.2_linux_amd64.zip
