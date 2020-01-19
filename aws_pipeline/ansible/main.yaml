@@ -1,0 +1,6 @@
+- name: Install Jenkins
+  hosts: jenkin
+  remote_user: centos
+  become: true
+  roles:
+    - jenkins

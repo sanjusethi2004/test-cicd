@@ -1,0 +1,12 @@
+---
+jenkins_jar_location: /opt/jenkins-cli.jar
+jenkins_admin_username: admin
+jenkins_admin_password: admin
+jenkins_admin_password_file: ""
+jenkins_updates_url: "https://updates.jenkins.io"
+jenkins_plugins:
+      - ghprb
+      - Bitbucket
+jenkins_plugins_state: present
+jenkins_plugin_updates_expiration: 86400
+jenkins_plugins_install_dependencies: true
