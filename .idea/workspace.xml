@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e61ca05-877a-436c-b1c6-abb461832d98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aws_pipeline/ansible/group_vars/all.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/handlers/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/settings.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aws_pipeline/jenkins/ansible.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aws_pipeline/nodejs/webec2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/test-cicd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test-cicd.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/plugins.yml" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/plugins.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/vars/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/vars/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aws_pipeline/jenkins/data/jenkins-init.sh" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/jenkins/data/jenkins-init.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws_pipeline/jenkins/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/jenkins/main.tf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aws_pipeline/jenkins/data/jenkins-init.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="460">
+              <caret line="54" selection-start-line="54" selection-end-line="54" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -162,7 +149,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1026" />
@@ -185,25 +172,6 @@
               <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
               <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
               <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
-              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
-              <item name="jenkins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
-              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
-              <item name="jenkins" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
-              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
-              <item name="nodejs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -254,7 +222,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1688988" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -480,8 +448,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/aws_pipeline/jenkins/data/jenkins-init.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="460">
+          <caret line="54" selection-start-line="54" selection-end-line="54" selection-end-column="80" />
         </state>
       </provider>
     </entry>
