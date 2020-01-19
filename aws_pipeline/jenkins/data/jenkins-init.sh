@@ -29,7 +29,7 @@ mount /var/lib/jenkins
 #yum clean all
 
 # install dependencies
-yum install -y python3 openjdk-8-jre java-1.8.0-openjdk-devel wget
+yum install -y python3 openjdk-8-jre java-1.8.0-openjdk-devel wget git
 #update-java-alternatives --set java-1.8.0-openjdk-amd64
 # install jenkins
 #yum install -y jenkins

@@ -106,7 +106,10 @@ resource "null_resource" "jenkins-ansible" {
     "module.my_jenkins"
   ]
   provisioner "local-exec" {
-    command = "aws ec2 wait instance-status-ok --instance-ids ${module.my_jenkins.ec2s[count.index]}  && ansible-playbook ../ansible/main.yaml"
+    command = "sed -i -e '/^jenkin_public_ip/s/:.*$/: ${module.my_jenkins.ec2s_pub_ip[count.index]}/' ../ansible/group_vars/all.yaml"
+  }
+  provisioner "local-exec" {
+    command = "aws ec2 wait instance-status-ok --instance-ids ${module.my_jenkins.ec2s[count.index]}  && ansible-playbook -i ../ansible/hosts ../ansible/main.yaml"
   }
 }
 output "jenkins-ip" {
