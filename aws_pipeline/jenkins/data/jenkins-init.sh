@@ -29,7 +29,6 @@ mount /var/lib/jenkins
 #yum clean all
 
 # install dependencies
-yum install -y python3 openjdk-8-jre java-1.8.0-openjdk-devel wget git
 #update-java-alternatives --set java-1.8.0-openjdk-amd64
 # install jenkins
 #yum install -y jenkins
@@ -38,22 +37,23 @@ yum install -y python3 openjdk-8-jre java-1.8.0-openjdk-devel wget git
 
 
 # install pip
-wget -q https://bootstrap.pypa.io/get-pip.py
-python3 get-pip.py
-rm -f get-pip.py
+#wget -q https://bootstrap.pypa.io/get-pip.py
+#python3 get-pip.py
+#rm -f get-pip.py
 # install awscli
-pip install awscli
+#pip install awscli
 
 # install terraform
-wget -q https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip \
-&& unzip -o terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/local/bin \
-&& rm terraform_${TERRAFORM_VERSION}_linux_amd64.zip
+#wget -q https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip \
+#&& unzip -o terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/local/bin \
+#&& rm terraform_${TERRAFORM_VERSION}_linux_amd64.zip
 
 # install packer
-cd /usr/local/bin
+#cd /usr/local/bin
 #wget -q https://releases.hashicorp.com/packer/0.10.2/packer_0.10.2_linux_amd64.zip
-wget -q https://releases.hashicorp.com/packer/1.5.1/packer_1.5.1_linux_amd64.zip
-unzip packer_0.10.2_linux_amd64.zip
+#wget -q https://releases.hashicorp.com/packer/{PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip \
+#&& unzip -o packer_${PACKER_VERSION}_linux_amd64.zip -d /usr/local/bin \
+#&& rm packer_${PACKER_VERSION}_linux_amd64.zip
 # clean up
 #rm terraform_0.7.7_linux_amd64.zip
 #rm packer_0.10.2_linux_amd64.zip

@@ -1,4 +1,1 @@
-jenkin_public_ip: 52.90.81.139
-jenkins_admin_password_file: /var/lib/jenkins/secrets/initialAdminPassword
-jenkins_init_file: /etc/sysconfig/jenkins
-jenkin_password: 9469ad1462ea405f922b424c7a0beb67
+jenkin_public_ip: 54.198.82.54

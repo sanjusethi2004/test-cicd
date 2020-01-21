@@ -31,6 +31,7 @@ data "template_file" "jenkins-init" {
     DEVICE = "${var.instance_device_name}"
     JENKINS_VERSION = "${var.jenkin_version}"
     TERRAFORM_VERSION = "${var.terraform_version}"
+    PACKER_VERSION = "${var.packer_version}"
   }
 }
 
@@ -69,7 +70,7 @@ module "my_sg" {
 
 module "my_jenkins" {
   source = "../modules/ec2"
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
   public_subnets = "${module.my_vpc.public_subnets}"
   ami_id = "${data.aws_ami.centos.id}"
   node_count = "1"

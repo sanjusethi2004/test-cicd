@@ -1,63 +1,124 @@
 ---
-# Ansible role to install jenkins
+- name: Disable SELinux
+  selinux:
+    state: disabled
 
-  # Include repo file
-  - include: repo.redhat.yml
+- name: Install Java and other packages using YUM.
+  yum:
+    name: "{{ packages }}"
+    state: present
+  become: true
 
-  - name: Install Jenkins
-    yum: name=jenkins state=latest
-    register: jenkins_install
+#- name: Install python-pip via yum.
+#  yum: "name={{ awscli_pip_package }} state=installed"
+#  become: yes
+- name: Get python-pip
+  get_url:
+    url: https://bootstrap.pypa.io/get-pip.py
+    dest: /root
 
-  - name: Enable and Start the Jenkins Service
-    service:
-      name: jenkins
-      enabled: yes
-      state: started
 
-  - name: Sleep for 30 seconds and continue with play
-    wait_for: timeout=30
+- name: Run Script
+  command: python3 get-pip.py
+  args:
+    chdir: /root
+    executable:
 
-  # Configure Jenkins init settings.
-  #- include_tasks: settings.yml
+- name: Install awscli via pip
+  pip:
+    name: "awscli"
+    executable: /usr/local/bin/pip
+  become: True
 
-  - name: Wait for Jenkins to start up before proceeding.
-    command: >
+
+- name: Get the terraform zip on the Jenkins server.
+  get_url:
+    url : "https://releases.hashicorp.com/terraform/{{ TERRAFORM_VERSION}}/terraform_{{ TERRAFORM_VERSION }}_linux_amd64.zip"
+    dest: "/tmp/terraform_{{ TERRAFORM_VERSION }}_linux_amd64.zip"
+
+
+- name: Get the packer jarfile on the Jenkins server.
+  get_url:
+    url : "https://releases.hashicorp.com/packer/1.5.1/packer_{{ PACKER_VERSION }}_linux_amd64.zip"
+    dest: "/tmp/packer_{{ PACKER_VERSION }}_linux_amd64.zip"
+
+
+- name: Unarchive terraform file that is already on the remote machine
+  unarchive:
+    src: /tmp/terraform_{{ TERRAFORM_VERSION }}_linux_amd64.zip
+    dest: /usr/local/bin
+    remote_src: yes
+
+- name: Unarchive packer file that is already on the remote machine
+  unarchive:
+    src: /tmp/packer_{{ PACKER_VERSION }}_linux_amd64.zip
+    dest: /usr/local/bin
+    remote_src: yes
+
+- name: Correct the alternatives to change default Java version.
+  alternatives:
+    name: java
+    link: /bin/java
+    path: "{{java.ALTERNATIVES}}"
+
+- name: Download Jenkins repo yum URL for
+  get_url:
+    url: "{{jenkins.repo_URL}}"
+    dest: /etc/yum.repos.d/jenkins.repo
+  become: true
+
+- name: Import GPG Key
+  rpm_key:
+    state: present
+    key: "{{jenkins.gpg_key}}"
+
+- name: Install Jenkins
+  yum:
+    name: jenkins
+    state: present
+
+
+
+#- name: Change Jenkins JAVA options
+#  lineinfile:
+#    dest=/etc/sysconfig/jenkins
+#    regexp=^JENKINS_JAVA_OPTIONS=
+#    line=JENKINS_JAVA_OPTIONS="{{jenkins.JAVA_OPTIONS}}"
+#  become: true
+
+- name: Start Jenkins service and enable on boot
+  service:
+    name: jenkins
+    state: started
+    enabled: yes
+
+- name: Wait for Jenkins to start up before proceeding.
+  command: >
       curl -D - --silent --max-time 5 http://{{ jenkin_public_ip }}:8080/jenkins/cli/
-    args:
+  args:
       warn: false
-    register: result
-    until: >
+  register: result
+  until: >
       (result.stdout.find("403 Forbidden") != -1)
       or (result.stdout.find("200 OK") != -1)
       and (result.stdout.find("Please wait while") == -1)
-    retries: 60
-    delay: 5
-    changed_when: false
-    check_mode: false
+  retries: 60
+  delay: 5
+  changed_when: false
+  check_mode: false
 
-  #- name: Get the jenkins-cli jarfile from the Jenkins server.
-  #  get_url:
-  #    url: "http://{{ jenkin_public_ip }}:8080/jenkins/jnlpJars/jenkins-cli.jar"
-  #    dest: "{{ jenkins_jar_location }}"
-  #  register: jarfile_get
-  #  until: "'OK' in jarfile_get.msg or '304' in jarfile_get.msg or 'file already exists' in jarfile_get.msg"
-  #  retries: 5
-  #  delay: 10
-  #  check_mode: false
-
-  #- name: Remove Jenkins security init scripts after first startup.
-  #  file:
-  #    path: "/var/lib/jenkins/init.groovy.d/basic-security.groovy"
-  #    state: absent
-
-  #- name: Get init password Jenkins
-  #  shell: cat /var/lib/jenkins/secrets/initialAdminPassword
-  #  changed_when: false
-  #  register: result
-
-  #- name: Print init password Jenkins
-  #  debug:
-  #    var: result.stdout
-
-  # Configure jenkins
-  - include: plugins.yml
+- name: Install Jenkins plugins using password.
+  jenkins_plugin:
+    name: build-pipeline-plugin
+    #jenkins_home: "/var/lib/jenkins"
+    #url_username: "{{ jenkins_admin_username }}"
+    #url_password: "{{ jenkins_admin_password }}"
+    #state: "{{ jenkins_plugins_state }}"
+    #timeout: "{{ jenkins_plugin_timeout }}"
+    #updates_expiration: "{{ jenkins_plugin_updates_expiration }}"
+    #updates_url: "{{ jenkins_updates_url }}"
+    #url: "http://{{ jenkin_public_ip }}:8080"
+    with_dependencies: "{{ jenkins_plugins_install_dependencies }}"
+  #with_items: "{{ jenkins_plugins }}"
+  #when: jenkins_admin_password | default(false)
+  notify: restart jenkins

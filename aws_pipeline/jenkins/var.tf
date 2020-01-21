@@ -40,3 +40,7 @@ variable "terraform_version" {
 variable "jenkin_version" {
   default = "2.121.2"
 }
+
+variable "packer_version" {
+  default = "1.5.1"
+}

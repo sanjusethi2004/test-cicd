@@ -1,7 +1,8 @@
 ---
 jenkins_jar_location: /opt/jenkins-cli.jar
 jenkins_admin_username: admin
-#jenkins_admin_password: admin
+jenkins_admin_password_file: /var/lib/jenkins/secrets/initialAdminPassword
+jenkins_admin_password: 666ea9844cd348d1b4f318e0d9bf8e21
 jenkins_updates_url: "https://updates.jenkins.io"
 jenkins_plugins:
       - build-pipeline-plugin
@@ -10,3 +11,17 @@ jenkins_plugins_state: present
 jenkins_plugin_updates_expiration: 86400
 jenkins_plugins_install_dependencies: true
 jenkins_plugin_timeout: 120
+
+awscli_version: 1.16.238
+
+TERRAFORM_VERSION: 0.12.9
+PACKER_VERSION: 1.5.1
+
+packages: [ 'java-1.8.0-openjdk', 'wget', 'git', 'python3', 'unzip' ]
+java:
+  ALTERNATIVES: "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.232.b09-0.el7_7.x86_64/jre/bin/java"
+jenkins_admin_password_file: /var/lib/jenkins/secrets/initialAdminPassword
+jenkins:
+  repo_URL: "http://pkg.jenkins-ci.org/redhat/jenkins.repo"
+  gpg_key: "https://jenkins-ci.org/redhat/jenkins-ci.org.key"
+  JAVA_OPTIONS: "-Djava.awt.headless=true -Djenkins.install.runSetupWizard=false"
