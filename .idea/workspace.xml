@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e61ca05-877a-436c-b1c6-abb461832d98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/aws_pipeline/nodejs/autoscalling.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aws_pipeline/nodejs/sg.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aws_pipeline/nodejs/var.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws_pipeline/ansible/group_vars/all.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/ansible/group_vars/all.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/plugins.yml" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/plugins.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/vars/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/vars/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws_pipeline/jenkins/data/jenkins-init.sh" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/jenkins/data/jenkins-init.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws_pipeline/jenkins/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/jenkins/main.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws_pipeline/jenkins/var.tf" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/jenkins/var.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws_pipeline/modules/iam/iam.tf" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/modules/iam/iam.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws_pipeline/nodejs/elb.tf" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/nodejs/elb.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws_pipeline/nodejs/webec2.json" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/nodejs/webec2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws_pipeline/web/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/web/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,8 +43,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="210">
-                <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="32" />
+              <first_editor relative-caret-position="231">
+                <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
               </first_editor>
               <second_editor />
             </state>
@@ -197,75 +182,6 @@
             <path>
               <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
               <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
-              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
-              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
-              <item name="ansible" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
-              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
-              <item name="ansible" type="462c0819:PsiDirectoryNode" />
-              <item name="roles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
-              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
-              <item name="ansible" type="462c0819:PsiDirectoryNode" />
-              <item name="roles" type="462c0819:PsiDirectoryNode" />
-              <item name="jenkins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
-              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
-              <item name="ansible" type="462c0819:PsiDirectoryNode" />
-              <item name="roles" type="462c0819:PsiDirectoryNode" />
-              <item name="jenkins" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
-              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
-              <item name="ansible" type="462c0819:PsiDirectoryNode" />
-              <item name="roles" type="462c0819:PsiDirectoryNode" />
-              <item name="jenkins" type="462c0819:PsiDirectoryNode" />
-              <item name="vars" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
-              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
-              <item name="jenkins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
-              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
-              <item name="jenkins" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
-              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
-              <item name="nodejs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
-              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -651,8 +567,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="210">
-            <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="32" />
+          <first_editor relative-caret-position="231">
+            <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           </first_editor>
           <second_editor />
         </state>
