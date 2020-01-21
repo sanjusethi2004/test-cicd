@@ -10,7 +10,7 @@ variable "key_name" {
 }
 
 variable "WEB_PORT" {
-  default =  "8080"
+  default =  "3000"
 }
 
 variable "iam_name" {
