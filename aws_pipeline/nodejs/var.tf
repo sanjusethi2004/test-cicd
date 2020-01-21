@@ -24,7 +24,3 @@ variable "iam_profile_name" {
 variable "INSTANCE_USERNAME" {
   default = "ubuntu"
 }
-
-variable "WEB_INSTANCE_AMI" {
-  default = "ami-05d0079b67ad6b0b8"
-}
