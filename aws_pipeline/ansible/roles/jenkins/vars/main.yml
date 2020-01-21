@@ -2,7 +2,7 @@
 jenkins_jar_location: /opt/jenkins-cli.jar
 jenkins_admin_username: admin
 jenkins_admin_password_file: /var/lib/jenkins/secrets/initialAdminPassword
-jenkins_admin_password: 666ea9844cd348d1b4f318e0d9bf8e21
+jenkins_admin_password: d128e6ff7b404be48bb9bbd1641b392d
 jenkins_updates_url: "https://updates.jenkins.io"
 jenkins_plugins:
       - build-pipeline-plugin

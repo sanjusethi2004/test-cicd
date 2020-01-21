@@ -31,7 +31,7 @@ variable "key_name" {
 }
 
 variable "instance_device_name" {
-  default = "/dev/xvdh"
+  default = "/dev/sdb"
 }
 
 variable "terraform_version" {

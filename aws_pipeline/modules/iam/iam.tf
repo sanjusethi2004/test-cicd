@@ -18,6 +18,8 @@ data "aws_iam_policy_document" "s3_access_policy" {
       "ec2:*",
       "iam:*",
       "rds:*",
+      "logs:*",
+      "cloudwatch:*",
       "elasticloadbalancing:*",
       "autoscaling:*"
     ]

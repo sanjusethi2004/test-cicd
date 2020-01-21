@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e61ca05-877a-436c-b1c6-abb461832d98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/main_backup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aws_pipeline/nodejs/elb.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aws_pipeline/nodejs/autoscalling.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aws_pipeline/nodejs/sg.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aws_pipeline/nodejs/var.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aws_pipeline/ansible/group_vars/all.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/ansible/group_vars/all.yaml" afterDir="false" />
@@ -13,7 +14,10 @@
       <change beforePath="$PROJECT_DIR$/aws_pipeline/jenkins/data/jenkins-init.sh" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/jenkins/data/jenkins-init.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aws_pipeline/jenkins/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/jenkins/main.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aws_pipeline/jenkins/var.tf" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/jenkins/var.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws_pipeline/modules/iam/iam.tf" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/modules/iam/iam.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws_pipeline/nodejs/elb.tf" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/nodejs/elb.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aws_pipeline/nodejs/webec2.json" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/nodejs/webec2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws_pipeline/web/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/web/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,32 +25,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/aws_pipeline/nodejs/elb.tf">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="189">
-                    <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aws_pipeline/jenkins/main.tf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-567">
-              <caret line="59" column="46" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
+            <state relative-caret-position="504">
+              <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -54,17 +39,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aws_pipeline/nodejs/webec2.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="14" lean-forward="true" selection-end-line="28" />
+            <state relative-caret-position="21">
+              <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aws_pipeline/web/package.json">
+        <entry file="file://$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/plugins.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="399">
+              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="65" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -74,7 +59,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="210">
-                <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+                <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="32" />
               </first_editor>
               <second_editor />
             </state>
@@ -82,47 +67,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aws_pipeline/modules/elb/elb.tf">
+        <entry file="file://$PROJECT_DIR$/aws_pipeline/nodejs/autoscalling.tf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="28" column="3" lean-forward="true" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
+            <state relative-caret-position="693">
+              <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aws_pipeline/modules/ec2/ec2.tf">
+        <entry file="file://$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/vars/main.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="210">
+              <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aws_pipeline/modules/ec2/output.tf">
+        <entry file="file://$PROJECT_DIR$/aws_pipeline/nodejs/elb.tf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            <state relative-caret-position="819">
+              <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aws_pipeline/modules/elb/output.tf">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aws_pipeline/modules/security_group/output.tf">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/main.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="749">
+              <caret line="129" column="23" lean-forward="true" selection-start-line="129" selection-start-column="23" selection-end-line="129" selection-end-column="23" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aws_pipeline/jenkins/data/jenkins-init.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="819">
-              <caret line="39" column="45" lean-forward="true" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+            <state relative-caret-position="483">
+              <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aws_pipeline/modules/security_group/jenkins-sg.tf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -164,19 +157,24 @@
         <option value="$PROJECT_DIR$/aws_pipeline/ansible/hosts/groups" />
         <option value="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/settings.yml" />
         <option value="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/handlers/main.yml" />
-        <option value="$PROJECT_DIR$/aws_pipeline/web/index.js" />
         <option value="$PROJECT_DIR$/aws_pipeline/web/index-test.js" />
         <option value="$PROJECT_DIR$/aws_pipeline/web/package.json" />
         <option value="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/vars/main_backup" />
-        <option value="$PROJECT_DIR$/aws_pipeline/jenkins/var.tf" />
-        <option value="$PROJECT_DIR$/aws_pipeline/jenkins/data/jenkins-init.sh" />
         <option value="$PROJECT_DIR$/aws_pipeline/ansible/group_vars/all.yaml" />
-        <option value="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/vars/main.yml" />
-        <option value="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/plugins.yml" />
-        <option value="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/main.yml" />
-        <option value="$PROJECT_DIR$/aws_pipeline/jenkins/main.tf" />
-        <option value="$PROJECT_DIR$/aws_pipeline/nodejs/webec2.json" />
+        <option value="$PROJECT_DIR$/aws_pipeline/nodejs/iam.tf" />
+        <option value="$PROJECT_DIR$/aws_pipeline/modules/iam/iam.tf" />
+        <option value="$PROJECT_DIR$/aws_pipeline/nodejs/var.tf" />
+        <option value="$PROJECT_DIR$/aws_pipeline/nodejs/sg.tf" />
         <option value="$PROJECT_DIR$/aws_pipeline/nodejs/elb.tf" />
+        <option value="$PROJECT_DIR$/aws_pipeline/web/index.js" />
+        <option value="$PROJECT_DIR$/aws_pipeline/jenkins/var.tf" />
+        <option value="$PROJECT_DIR$/aws_pipeline/jenkins/main.tf" />
+        <option value="$PROJECT_DIR$/aws_pipeline/nodejs/autoscalling.tf" />
+        <option value="$PROJECT_DIR$/aws_pipeline/nodejs/webec2.json" />
+        <option value="$PROJECT_DIR$/aws_pipeline/jenkins/data/jenkins-init.sh" />
+        <option value="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/plugins.yml" />
+        <option value="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/vars/main.yml" />
+        <option value="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/main.yml" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -193,7 +191,86 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
+              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
+              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
+              <item name="ansible" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
+              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
+              <item name="ansible" type="462c0819:PsiDirectoryNode" />
+              <item name="roles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
+              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
+              <item name="ansible" type="462c0819:PsiDirectoryNode" />
+              <item name="roles" type="462c0819:PsiDirectoryNode" />
+              <item name="jenkins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
+              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
+              <item name="ansible" type="462c0819:PsiDirectoryNode" />
+              <item name="roles" type="462c0819:PsiDirectoryNode" />
+              <item name="jenkins" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
+              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
+              <item name="ansible" type="462c0819:PsiDirectoryNode" />
+              <item name="roles" type="462c0819:PsiDirectoryNode" />
+              <item name="jenkins" type="462c0819:PsiDirectoryNode" />
+              <item name="vars" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
+              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
+              <item name="jenkins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
+              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
+              <item name="jenkins" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
+              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
+              <item name="nodejs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test-cicd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test-cicd" type="462c0819:PsiDirectoryNode" />
+              <item name="aws_pipeline" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
@@ -242,12 +319,12 @@
     <frame x="3278" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25605902" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Project Explorer" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="DB Browser" order="4" />
-      <window_info id="Job Explorer" order="5" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.25605902" />
+      <window_info id="Project Explorer" order="1" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="DB Browser" order="3" />
+      <window_info id="Job Explorer" order="4" />
+      <window_info id="Structure" order="5" sideWeight="0.5005417" side_tool="true" weight="0.25605902" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -265,41 +342,8 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25605902" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Project Explorer" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="DB Browser" order="4" />
-      <window_info id="Job Explorer" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Console" order="7" />
-      <window_info anchor="bottom" id="DB Execution Console" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/aws_pipline/modules/vpc/var.tf" />
-    <entry file="file://$PROJECT_DIR$/aws_pipline/modules/vpc/output.tf" />
-    <entry file="file://$PROJECT_DIR$/aws_pipline/modules/security_group/var.tf" />
-    <entry file="file://$PROJECT_DIR$/aws_pipline/modules/security_group/output.tf" />
-    <entry file="file://$PROJECT_DIR$/aws_pipline/modules/security_group/jenkins-sg.tf" />
-    <entry file="file://$PROJECT_DIR$/aws_pipline/modules/ec2/output.tf" />
-    <entry file="file://$PROJECT_DIR$/aws_pipline/jenkins/var.tf" />
-    <entry file="file://$PROJECT_DIR$/aws_pipline/modules/iam/iam.tf" />
-    <entry file="file://$PROJECT_DIR$/aws_pipline/modules/iam/var.tf" />
     <entry file="file://$PROJECT_DIR$/aws_pipline/modules/ec2/ec2.tf" />
     <entry file="file://$PROJECT_DIR$/aws_pipline/modules/ec2/var.tf" />
     <entry file="file://$PROJECT_DIR$/../k8-terraform/terraform/dev/var.tf">
@@ -319,13 +363,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/test-cicd/aws_pipline/jenkins/data/jenkins-init.sh" />
-    <entry file="file://$PROJECT_DIR$/aws_pipeline/modules/security_group/jenkins-sg.tf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../k8-terraform/terraform/dev/main.tf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -434,45 +471,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aws_pipeline/jenkins/var.tf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/main.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2352">
-          <caret line="112" column="37" selection-start-line="112" selection-start-column="37" selection-end-line="112" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aws_pipeline/ansible/group_vars/all.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="30" selection-start-column="18" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/vars/main.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/plugins.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aws_pipeline/web/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -486,49 +488,14 @@
     <entry file="file://$PROJECT_DIR$/aws_pipeline/web/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aws_pipeline/jenkins/data/jenkins-init.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="39" column="45" lean-forward="true" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aws_pipeline/nodejs/webec2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="14" lean-forward="true" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aws_pipeline/jenkins/main.tf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-567">
-          <caret line="59" column="46" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aws_pipeline/modules/elb/elb.tf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="28" column="3" lean-forward="true" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aws_pipeline/modules/ec2/ec2.tf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aws_pipeline/modules/ec2/output.tf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -538,10 +505,146 @@
     <entry file="file://$PROJECT_DIR$/aws_pipeline/modules/security_group/output.tf">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/aws_pipeline/nodejs/elb.tf">
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/modules/vpc/networking.tf">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/modules/vpc/var.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/nodejs/iam.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/modules/iam/output.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/modules/iam/iam.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/modules/ec2/ec2.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/modules/elb/var.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/modules/elb/elb.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/nodejs/var.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/nodejs/sg.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/web/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/jenkins/var.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/modules/security_group/jenkins-sg.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/nodejs/autoscalling.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/nodejs/elb.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/nodejs/webec2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/jenkins/main.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/jenkins/data/jenkins-init.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/vars/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/plugins.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="65" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="749">
+          <caret line="129" column="23" lean-forward="true" selection-start-line="129" selection-start-column="23" selection-end-line="129" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -549,7 +652,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="210">
-            <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+            <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="32" />
           </first_editor>
           <second_editor />
         </state>

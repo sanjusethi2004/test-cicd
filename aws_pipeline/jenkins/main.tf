@@ -70,7 +70,7 @@ module "my_sg" {
 
 module "my_jenkins" {
   source = "../modules/ec2"
-  instance_type = "t3.micro"
+  instance_type = "t2.micro"
   public_subnets = "${module.my_vpc.public_subnets}"
   ami_id = "${data.aws_ami.centos.id}"
   node_count = "1"
