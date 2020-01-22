@@ -10,7 +10,7 @@ resource "aws_launch_configuration" "web-launchconfig" {
   instance_type        = "t2.micro"
   security_groups      = ["${aws_security_group.web-instance.id}"]
 
-  user_data = "${data.template_file.web-shell-script.rendered}"
+  #user_data = "${data.template_file.web-shell-script.rendered}"
   iam_instance_profile = "${module.my_iam1.iam_name}"
   key_name = "${var.key_name}"
 
