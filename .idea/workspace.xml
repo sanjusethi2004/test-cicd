@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e61ca05-877a-436c-b1c6-abb461832d98" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/aws_pipeline/nodejs/autoscalling.tf" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/nodejs/autoscalling.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws_pipeline/nodejs/webec2.json" beforeDir="false" afterPath="$PROJECT_DIR$/aws_pipeline/nodejs/webec2.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,11 +52,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aws_pipeline/nodejs/autoscalling.tf">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
               <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/aws_pipeline/nodejs/webec2.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -115,15 +124,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aws_pipeline/jenkins/data/jenkins-init.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -172,7 +172,6 @@
         <option value="$PROJECT_DIR$/aws_pipeline/web/index.js" />
         <option value="$PROJECT_DIR$/aws_pipeline/jenkins/var.tf" />
         <option value="$PROJECT_DIR$/aws_pipeline/jenkins/main.tf" />
-        <option value="$PROJECT_DIR$/aws_pipeline/nodejs/webec2.json" />
         <option value="$PROJECT_DIR$/aws_pipeline/jenkins/data/jenkins-init.sh" />
         <option value="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/tasks/plugins.yml" />
         <option value="$PROJECT_DIR$/aws_pipeline/ansible/roles/jenkins/vars/main.yml" />
@@ -182,6 +181,7 @@
         <option value="$PROJECT_DIR$/aws_pipeline/nodejs/scripts" />
         <option value="$PROJECT_DIR$/aws_pipeline/web/web-init.sh" />
         <option value="$PROJECT_DIR$/aws_pipeline/nodejs/autoscalling.tf" />
+        <option value="$PROJECT_DIR$/aws_pipeline/nodejs/webec2.json" />
       </list>
     </option>
   </component>
@@ -530,13 +530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aws_pipeline/nodejs/webec2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aws_pipeline/jenkins/main.tf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -621,6 +614,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws_pipeline/nodejs/webec2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
         </state>
       </provider>
     </entry>
