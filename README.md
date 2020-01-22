@@ -1,7 +1,4 @@
 # test-cicd
-http://23.20.191.158:8080/github-webhook/
-
-d128e6ff7b404be48bb9bbd1641b392d
 Job 1. Create a jenkins job with git webhook to trigger for Ec2 Packer image creation which will we used in second JOB to create Nodejs web application. 
     parameters:
         1. GitHub Project: 
@@ -25,7 +22,18 @@ Job 1. Create a jenkins job with git webhook to trigger for Ec2 Packer image cre
 Job 2. Create a second jenkins job which will be triggered automatically after above job is success. 
        1. GitHub Project: 
             project url: https://github.com/sanjusethi2004/test-cicd/
-        2. Source Code Management
+       2. Source Code Management
             select git.
                repository URL: https://github.com/sanjusethi2004/test-cicd.git 
                         (note:credential not required as this is public repo)
+       3. Build Triggers.
+              select  "Build after other projects are built"
+                 Projects to watch: "Add above Job Name"
+       4. Build
+              select: Execute Shell
+                Add below lines.
+                  set +x
+                  cd aws_pipeline/nodejs
+                  /usr/local/bin/aws s3 cp s3://cicd-jenkins-terraform/nodejs_web.tf nodejs_web.tf
+                  /usr/local/bin/terraform init
+                  /usr/local/bin/terraform apply -auto-approve
