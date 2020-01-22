@@ -18,7 +18,7 @@ variable "iam_name" {
 }
 
 variable "iam_profile_name" {
-  default = "web-profile"
+  default = "web-nodejs"
 }
 
 variable "INSTANCE_USERNAME" {
