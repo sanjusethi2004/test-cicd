@@ -1,5 +1,6 @@
 # test-cicd
 Job 1. Create a jenkins job with git webhook to trigger for Ec2 Packer image creation which will we used in second JOB to create Nodejs web application. 
+
     parameters:
         1. GitHub Project: 
             project url: https://github.com/sanjusethi2004/test-cicd/
@@ -20,6 +21,7 @@ Job 1. Create a jenkins job with git webhook to trigger for Ec2 Packer image cre
                     /usr/local/bin/aws s3 cp nodejs_web.tf s3://cicd-jenkins-terraform/nodejs_web.tf
 
 Job 2. Create a second jenkins job which will be triggered automatically after above job is success. 
+
        1. GitHub Project: 
             project url: https://github.com/sanjusethi2004/test-cicd/
        2. Source Code Management
