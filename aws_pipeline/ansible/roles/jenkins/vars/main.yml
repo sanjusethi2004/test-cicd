@@ -19,8 +19,7 @@ PACKER_VERSION: 1.5.1
 
 packages: [ 'java-1.8.0-openjdk', 'wget', 'git', 'python3', 'unzip' ]
 java:
-  ALTERNATIVES: "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.232.b09-0.el7_7.x86_64/jre/bin/java"
-jenkins_admin_password_file: /var/lib/jenkins/secrets/initialAdminPassword
+  ALTERNATIVES: "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/bin/java"
 jenkins:
   repo_URL: "http://pkg.jenkins-ci.org/redhat/jenkins.repo"
   gpg_key: "https://jenkins-ci.org/redhat/jenkins-ci.org.key"
