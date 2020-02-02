@@ -1,3 +1,7 @@
+prerequisite:
+    1. Create a key pair and add it to nodejs terraform Variable.
+    2. Create S3 bucket to store terraform State and Packer build image Id. Also add Bucket name in jenkins Jobs configuration below.
+
 # test-cicd
 Job 1. Create a jenkins job with git webhook to trigger for Ec2 Packer image creation which will we used in second JOB to create Nodejs web application. 
 
@@ -18,7 +22,7 @@ Job 1. Create a jenkins job with git webhook to trigger for Ec2 Packer image cre
                     ARTIFACT_WEB=`/usr/local/bin/packer build -machine-readable webec2.json | awk -F, '$0 ~/artifact,0,id/ {print $6}'`
                     AMI_ID_WEB=`echo $ARTIFACT_WEB | cut -d ':' -f2`
                     echo 'variable "WEB_INSTANCE_AMI" { default = "'${AMI_ID_WEB}'" }' > nodejs_web.tf
-                    /usr/local/bin/aws s3 cp nodejs_web.tf s3://cicd-jenkins-terraform/nodejs_web.tf
+                    /usr/local/bin/aws s3 cp nodejs_web.tf s3://{{Bucket_name}}/nodejs_web.tf
 
 Job 2. Create a second jenkins job which will be triggered automatically after above job is success. 
 
@@ -36,7 +40,7 @@ Job 2. Create a second jenkins job which will be triggered automatically after a
                 Add below lines.
                   set +x
                   cd aws_pipeline/nodejs
-                  /usr/local/bin/aws s3 cp s3://cicd-jenkins-terraform/nodejs_web.tf nodejs_web.tf
+                  /usr/local/bin/aws s3 cp s3://{{Bucket_name}}/nodejs_web.tf nodejs_web.tf
                   /usr/local/bin/terraform init
                   /usr/local/bin/terraform apply -auto-approve
      test commit 2
