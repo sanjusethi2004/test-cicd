@@ -43,4 +43,4 @@ Job 2. Create a second jenkins job which will be triggered automatically after a
                   /usr/local/bin/aws s3 cp s3://{{Bucket_name}}/nodejs_web.tf nodejs_web.tf
                   /usr/local/bin/terraform init
                   /usr/local/bin/terraform apply -auto-approve
-     test commit 3
+     test commit 4
