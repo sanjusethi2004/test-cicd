@@ -6,7 +6,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "cicd-jenkins-terraform"
+    bucket = "cicd-jenkins-terraforms"
     key    = "web-node.tfstate"
     region = "us-east-1"
   }
